@@ -2,6 +2,8 @@ package com.sevkiyat.controller;
 
 import com.sevkiyat.entity.Person;
 import com.sevkiyat.service.PersonService;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,9 +20,11 @@ public class PersonController {
     }
 
     @PostMapping
-    public Person addPerson(@RequestBody Person person) {
-        return personService.savePerson(person);
+    public ResponseEntity<Person> createPerson(@RequestBody Person person) {
+        Person saved = personService.savePerson(person);
+        return ResponseEntity.ok(saved);
     }
+    
 
     @GetMapping
     public List<Person> getAllPersons() {

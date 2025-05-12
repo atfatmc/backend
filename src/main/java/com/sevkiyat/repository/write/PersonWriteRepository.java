@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PersonWriteRepository extends JpaRepository<Person, Long> {
+    boolean existsByFirstNameAndLastName(String firstName, String lastName);
 }

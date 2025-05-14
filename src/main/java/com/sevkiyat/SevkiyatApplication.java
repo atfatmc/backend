@@ -2,9 +2,14 @@ package com.sevkiyat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+
 import io.github.cdimascio.dotenv.Dotenv;
 
 @SpringBootApplication
+@EntityScan(basePackages = "com.sevkiyat.entity")
+@ComponentScan(basePackages = "com.sevkiyat")
 public class SevkiyatApplication {
 
 	public static void main(String[] args) {

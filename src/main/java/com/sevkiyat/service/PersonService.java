@@ -4,8 +4,8 @@ import com.sevkiyat.entity.Person;
 import com.sevkiyat.exception.DuplicatePersonException;
 import com.sevkiyat.repository.read.PersonReadRepository;
 import com.sevkiyat.repository.write.PersonWriteRepository;
+
 import org.springframework.stereotype.Service;
-import com.sevkiyat.exception.DuplicatePersonException;
 
 import java.util.List;
 
